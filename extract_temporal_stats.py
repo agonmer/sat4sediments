@@ -130,16 +130,16 @@ for ss in range(len(df_loc['LONG'])): #np.arange(157,158): #range(len(df_loc['LO
 
     # Compute the statistics of interest for SST and Chla.
     sst_t = np.array(sst_series)
-    sst_min = np.min(sst_t)
-    sst_max = np.max(sst_t)
-    sst_avg = np.mean(sst_t)
+    sst_min = np.nanmin(sst_t)
+    sst_max = np.nanmax(sst_t)
+    sst_avg = np.nanmean(sst_t)
     sst_seasonal_cycle = sst_seasonal/sst_seasonal_count 
     sst_stats = np.concatenate((np.array([lon0,lat0,wd0,sf0,sst_min,sst_avg,sst_max]),sst_seasonal_cycle))
     
     chla_t = np.array(chla_series)
-    chla_min = np.min(chla_t)
-    chla_max = np.max(chla_t)
-    chla_avg = np.mean(chla_t)
+    chla_min = np.nanmin(chla_t)
+    chla_max = np.nanmax(chla_t)
+    chla_avg = np.nanmean(chla_t)
     chla_seasonal_cycle = chla_seasonal/chla_seasonal_count 
     chla_stats = np.concatenate((np.array([chla_min,chla_avg,chla_max]),chla_seasonal_cycle))
     
