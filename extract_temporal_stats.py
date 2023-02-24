@@ -49,8 +49,10 @@ allstats_db = np.array(['LONG','LAT','Water depth','Stations/Facies',
                         'ChlaJul_mg_m-3','ChlaAug_mg_m-3','ChlaSep_mg_m-3','ChlaOct_mg_m-3','ChlaNov_mg_m-3','ChlaDec_mg_m-3'
                        ])
 
+list_of_nans_sst = []
+list_of_nans_chla = []
 
-for ss in range(len(df_loc['LONG'])): #np.arange(157,158): #range(len(df_loc['LONG'])): # Loop on the sites.
+for ss in range(len(df_loc['LONG'])): # np.arange(498,500): # range(len(df_loc['LONG'])): # Loop on the sites.
     # Select the point.
     lon0 = df_loc['LONG'][ss]
     lat0 = df_loc['LAT'][ss]
@@ -58,8 +60,6 @@ for ss in range(len(df_loc['LONG'])): #np.arange(157,158): #range(len(df_loc['LO
     sf0 = str(df_loc['Stations/Facies'][ss])
     
     print('--------------------------------------------')
-    print(sf0)
-    print(wd0)
     print(sf0 + ' at ' + str(wd0) +' m')
     print(str(ss) +' out of '+ str(len(df_loc['LONG'])))
     print('--------------------------------------------')
@@ -76,6 +76,9 @@ for ss in range(len(df_loc['LONG'])): #np.arange(157,158): #range(len(df_loc['LO
     chla_seasonal_count = np.zeros(12)
     nyears = 0 # Number of years.
 
+    the_area_has_been_extended_sst = False
+    the_area_has_been_extended_chla = False
+    
     while instant <= instant_end:
         print(instant)
         pd_instant = pd.to_datetime(instant)
@@ -97,7 +100,13 @@ for ss in range(len(df_loc['LONG'])): #np.arange(157,158): #range(len(df_loc['LO
             # Read the pointwise SST value.
             sst0 = ds_sst['analysed_sst'][mm].sel(lon=slice(lon0-dlon,lon0+dlon),
                                                   lat=slice(lat0-dlat,lat0+dlat)).mean(dim=['lon','lat'],skipna=True).values
-
+            if np.isnan(sst0): # Extend the area over which the sst is read.
+                dlonn = 0.2
+                dlatt = 0.2
+                sst0 = ds_sst['analysed_sst'][mm].sel(lon=slice(lon0-dlonn,lon0+dlonn),
+                                                      lat=slice(lat0-dlatt,lat0+dlatt)).mean(dim=['lon','lat'],skipna=True).values
+                the_area_has_been_extended_sst = True
+                
             sst_series.extend([sst0.item()])
             sst_seasonal[mm] += sst0
             sst_seasonal_count[mm] += 1
@@ -109,6 +118,13 @@ for ss in range(len(df_loc['LONG'])): #np.arange(157,158): #range(len(df_loc['LO
 
             chla0 = ds_chla['chlor_a'][0].sel(lon=slice(lon0-dlon,lon0+dlon),
                                               lat=slice(lat0+dlat,lat0-dlat)).mean(dim=['lon','lat'],skipna=True).values
+            if np.isnan(chla0): # Extend the area over which the sst is read.
+                dlonn = 0.2
+                dlatt = 0.2
+                chla0 = ds_chla['chlor_a'][0].sel(lon=slice(lon0-dlonn,lon0+dlonn),
+                                                 lat=slice(lat0-dlatt,lat0+dlatt)).mean(dim=['lon','lat'],skipna=True).values
+                the_area_has_been_extended_chla = True
+
             chla_series.extend([chla0.item()])
             chla_seasonal[mm] += chla0
             chla_seasonal_count[mm] += 1
@@ -127,6 +143,13 @@ for ss in range(len(df_loc['LONG'])): #np.arange(157,158): #range(len(df_loc['LO
                 
         instant = np.datetime64(str(int(year_oi)+1)+'-01-01') #+= np.timedelta64(1,'Y')
         nyears += 1
+    
+    if the_area_has_been_extended_sst:
+        list_of_nans_sst.append(sf0+'_at_'+str(wd0))
+        print('sst:',list_of_nans_sst)    
+    if the_area_has_been_extended_chla:
+        list_of_nans_chla.append(sf0+'_at_'+str(wd0))
+        print('chla:',list_of_nans_chla)
 
     # Compute the statistics of interest for SST and Chla.
     sst_t = np.array(sst_series)
@@ -148,3 +171,5 @@ for ss in range(len(df_loc['LONG'])): #np.arange(157,158): #range(len(df_loc['LO
     #print(allstats_db)
     
 pd.DataFrame(allstats_db).to_csv('stats_prova.csv')
+pd.DataFrame(list_of_nans_sst).to_csv('list_sites_larger_area_sst.csv')
+pd.DataFrame(list_of_nans_chla).to_csv('list_sites_larger_area_chla.csv')
