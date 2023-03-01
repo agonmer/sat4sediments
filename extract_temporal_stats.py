@@ -29,9 +29,11 @@ df_loc = pd.read_csv(filename,sep='\t')
 # Set the path to SST files
 path2sst = '/media/agostino/sailboat/neodc/esacci/sst/data/CDR_v2/Analysis/L4/v2.1/'
 path2chla = '/media/agostino/sailboat/dap.ceda.ac.uk/neodc/esacci/ocean_colour/data/v5.0-release/geographic/netcdf/chlor_a/monthly/v5.0/'
+path2kd = '/media/agostino/sailboat/dap.ceda.ac.uk/neodc/esacci/ocean_colour/data/v5.0-release/geographic/netcdf/kd/monthly/v5.0/'
+path2sw = '/media/agostino/sailboat/satproj_klima_dwd/ESA_CLoud_CCI/CLD_PRODUCTS/v3.0/L3C/AVHRR-AM/AVHRR_METOPA/'
 
 # Set the time window in which data are available at the monthly res.
-str_start = '2007-01-01' #'YYYY-MM-DD'
+str_start = '2008-01-01' #'YYYY-MM-DD'
 str_end = '2013-12-01'
 instant_start = np.datetime64(str_start)
 instant_end = np.datetime64(str_end)
@@ -43,7 +45,7 @@ dlonn = 0.2
 dlatt = 0.2
 dlonnn = 0.5
 dlattt = 0.5
-
+"""
 allstats_db = np.array(['LONG','LAT','Water depth','Stations/Facies',
                         'SSTmin_K','SSTavg_K','SSTmax_K',
                         'SSTJan_K','SSTFeb_K','SSTMar_K','SSTApr_K','SSTMay_K','SSTJun_K',
@@ -173,7 +175,7 @@ for ss in range(len(df_loc['LONG'])): # np.arange(498,500): # range(len(df_loc['
 pd.DataFrame(allstats_db).to_csv('stats_prova.csv')
 pd.DataFrame(list_of_nans_sst).to_csv('list_sites_larger_area_sst.csv')
 pd.DataFrame(list_of_nans_chla).to_csv('list_sites_larger_area_chla.csv')
-
+"""
 # Analysis on KD and SW. SW is the shortwave flux at the surface and SWz is at depth, computed as
 # SWz = SW*exp(-KD*wd0)
 
@@ -191,7 +193,7 @@ allstats_d2 = np.array(['LONG','LAT','Water depth','Stations/Facies',
 
 list_of_nans_kd = []
 
-for ss in np.arange(700,701): #range(len(df_loc['LONG'])): # Loop on the sites.
+for ss in range(len(df_loc['LONG'])): #range(len(df_loc['LONG'])): # Loop on the sites.
     # Select the point.
     lon0 = df_loc['LONG'][ss]
     lat0 = df_loc['LAT'][ss]
