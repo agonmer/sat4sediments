@@ -1,5 +1,7 @@
 # Same as the notebook, to be run in the background.
 # Jan 27, 2023. No maps are drawn.
+# March 2023. Compute the energy at depth with the radiation absorption coeff.
+# April 4, 2023. Use the DB_28032023_nofirst_col.csv file as an input.
 
 import numpy as np
 import matplotlib.pyplot as plt
@@ -23,7 +25,7 @@ def plot_background(ax):
 
 # Read the file with the location of the sediments
 
-filename = 'DB_27122022.csv'
+filename = 'DB_28032023_nofirstcol.csv' #'DB_27122022.csv'
 df_loc = pd.read_csv(filename,sep='\t')
 
 # Set the path to SST files
@@ -45,7 +47,7 @@ dlonn = 0.2
 dlatt = 0.2
 dlonnn = 0.5
 dlattt = 0.5
-"""
+
 allstats_db = np.array(['LONG','LAT','Water depth','Stations/Facies',
                         'SSTmin_K','SSTavg_K','SSTmax_K',
                         'SSTJan_K','SSTFeb_K','SSTMar_K','SSTApr_K','SSTMay_K','SSTJun_K',
@@ -175,7 +177,7 @@ for ss in range(len(df_loc['LONG'])): # np.arange(498,500): # range(len(df_loc['
 pd.DataFrame(allstats_db).to_csv('stats_prova.csv')
 pd.DataFrame(list_of_nans_sst).to_csv('list_sites_larger_area_sst.csv')
 pd.DataFrame(list_of_nans_chla).to_csv('list_sites_larger_area_chla.csv')
-"""
+
 # Analysis on KD and SW. SW is the shortwave flux at the surface and SWz is at depth, computed as
 # SWz = SW*exp(-KD*wd0)
 
