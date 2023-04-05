@@ -43,10 +43,12 @@ instant_end = np.datetime64(str_end)
 # Set the half width of the box over which to take the average.
 dlat = 0.1
 dlon = 0.1
-dlonn = 0.2
-dlatt = 0.2
-dlonnn = 0.5
-dlattt = 0.5
+dlonn = 1
+dlatt = 1
+dlonnn = 1
+dlattt = 1
+# I decide to extend the area to take averages in case there are NaNs in the small area, so that all cases are covered 
+# with a single value!
 
 allstats_db = np.array(['LONG','LAT','Water depth','Stations/Facies',
                         'SSTmin_K','SSTavg_K','SSTmax_K',
@@ -112,7 +114,7 @@ for ss in range(len(df_loc['LONG'])): # np.arange(498,500): # range(len(df_loc['
                 sst0 = ds_sst['analysed_sst'][mm].sel(lon=slice(lon0-dlonn,lon0+dlonn),
                                                       lat=slice(lat0-dlatt,lat0+dlatt)).mean(dim=['lon','lat'],skipna=True).values
                 the_area_has_been_extended_sst = True
-                
+      
             sst_series.extend([sst0.item()])
             sst_seasonal[mm] += sst0
             sst_seasonal_count[mm] += 1
@@ -124,11 +126,16 @@ for ss in range(len(df_loc['LONG'])): # np.arange(498,500): # range(len(df_loc['
 
             chla0 = ds_chla['chlor_a'][0].sel(lon=slice(lon0-dlon,lon0+dlon),
                                               lat=slice(lat0+dlat,lat0-dlat)).mean(dim=['lon','lat'],skipna=True).values
-            if np.isnan(chla0): # Extend the area over which the sst is read.
+            if np.isnan(chla0): # Extend the area over which the chla is read.
                 chla0 = ds_chla['chlor_a'][0].sel(lon=slice(lon0-dlonn,lon0+dlonn),
                                                  lat=slice(lat0-dlatt,lat0+dlatt)).mean(dim=['lon','lat'],skipna=True).values
                 the_area_has_been_extended_chla = True
+                
+                if np.isnan(np.nanmean(chla0)): # I have checked that if this value is still empty, there is an issue with the latitude
+                    chla0 = ds_chla['chlor_a'][0].sel(lon=slice(lon0-dlonn,lon0+dlonn),
+                                                      lat=slice(lat0+dlatt,lat0-dlatt)).mean(dim=['lon','lat'],skipna=True).values
 
+              
             chla_series.extend([chla0.item()])
             chla_seasonal[mm] += chla0
             chla_seasonal_count[mm] += 1
