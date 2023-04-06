@@ -1,0 +1,399 @@
+,0
+0,North_at_10.5
+1,11513_at_40.0
+2,11514_at_40.0
+3,11515_at_10.0
+4,11526_at_40.0
+5,11527_at_10.0
+6,11530_at_40.0
+7,11531_at_40.0
+8,11532_at_40.0
+9,11547_at_40.0
+10,BIH_at_80.0
+11,BGR_at_30.0
+12,BGW_at_30.0
+13,BFB_at_30.0
+14,BFW_at_30.0
+15,BGF_at_30.0
+16,BGI_at_30.0
+17,BIA_at_30.0
+18,1_at_501.0
+19,2_at_396.0
+20,3_at_406.0
+21,4_at_486.0
+22,5_at_951.0
+23,6_at_481.0
+24,7_at_386.0
+25,8_at_346.0
+26,9_at_356.0
+27,10_at_391.0
+28,11_at_401.0
+29,12_at_466.0
+30,13_at_311.0
+31,14_at_281.0
+32,15_at_391.0
+33,16_at_506.0
+34,17_at_1046.0
+35,18_at_686.0
+36,19_at_386.0
+37,20_at_236.0
+38,21_at_206.0
+39,22_at_246.0
+40,23_at_346.0
+41,24_at_221.0
+42,25_at_181.0
+43,26_at_181.0
+44,27_at_231.0
+45,28_at_486.0
+46,29_at_896.0
+47,30_at_636.0
+48,31_at_196.0
+49,32_at_161.0
+50,33_at_202.0
+51,34_at_256.0
+52,35_at_236.0
+53,36_at_166.0
+54,37_at_171.0
+55,38_at_216.0
+56,39_at_271.0
+57,40_at_891.0
+58,41_at_486.0
+59,42_at_286.0
+60,43_at_226.0
+61,44_at_216.0
+62,45_at_266.0
+63,nan_at_80.0
+64,1_at_70.0
+65,2_at_50.0
+66,3_at_90.0
+67,4_at_50.0
+68,5_at_100.0
+69,6_at_100.0
+70,7_at_50.0
+71,8_at_200.0
+72,9_at_150.0
+73,10_at_150.0
+74,11_at_150.0
+75,nan_at_152.0
+76,Maerl_at_10.0
+77,Algal gravel sand_at_57.0
+78,Bivalve-coralline algal muddy sand_at_57.0
+79,Echinoderm-bivalve-foraminifer sand_at_57.0
+80,Barnacle-bivalve-echinoderm sand_at_57.0
+81,Bryozoan-bivalve-barnacle sand_at_60.0
+82,Barnacle-foraminifer sand_at_45.0
+83,Foraminifer-bryozoan sand_at_50.0
+84,MPG 11C_at_0.5
+85,MPG 11E_at_0.3
+86,MPG 11I_at_1.2
+87,MPG 11K_at_0.7
+88,MPG 11O_at_0.5
+89,MPG 12A_at_1.6
+90,MPG 12F_at_0.5
+91,MPG 12K_at_0.7
+92,MPG 12M_at_0.4
+93,MPG 12O_at_0.4
+94,MPG 14C_at_2.0
+95,MPG 14E_at_3.0
+96,MPG 21F_at_0.5
+97,MPG 21G_at_0.3
+98,MPG 21H_at_0.4
+99,MPG 21P_at_0.5
+100,MPG 22C_at_0.6
+101,MPG 22E_at_0.5
+102,MPG 22I_at_0.5
+103,MPG 23A_at_21.0
+104,MPG 23C_at_15.0
+105,MPG 23E_at_12.0
+106,MPG 24E_at_15.0
+107,MPG 24F_at_12.0
+108,MPG 31B_at_0.7
+109,MPG 31C_at_0.5
+110,MPG 31D_at_0.5
+111,MPG 31J_at_19.0
+112,MPG 31L_at_15.0
+113,MPG 31N_at_12.0
+114,MPG 32A_at_4.0
+115,MPG 32D_at_3.0
+116,MPG 32K_at_10.0
+117,MPG 32M_at_12.0
+118,MPG 33D_at_12.0
+119,MPG 33G_at_8.0
+120,MPG 33J_at_7.0
+121,MPG 41G_at_1.2
+122,MPG 41I_at_0.5
+123,MPG 41O_at_0.5
+124,MPG 42D_at_15.0
+125,MPG 42G_at_10.0
+126,MPG 42L_at_18.0
+127,MPG 42O_at_15.0
+128,MPG 42R_at_13.0
+129,PR 21A_at_1.2
+130,PR 21C_at_0.8
+131,PR 21E_at_0.5
+132,PR 21G_at_0.4
+133,PR 21I_at_0.4
+134,PR 22A_at_1.5
+135,PR 22C_at_1.0
+136,PR 22E_at_0.8
+137,PR 22G_at_0.6
+138,PR 22I_at_0.4
+139,PR 22K_at_0.4
+140,PR 22M_at_0.3
+141,PR 22O_at_0.3
+142,PR 23A_at_1.5
+143,PR 23C_at_1.0
+144,PR 23E_at_0.8
+145,PR 23G_at_0.6
+146,PR 23I_at_0.6
+147,PR 23K_at_0.4
+148,PR 23M_at_0.3
+149,PR 23O_at_0.3
+150,PR 24A_at_1.5
+151,PR 24C_at_1.0
+152,PR 24E_at_0.8
+153,PR 24G_at_0.6
+154,PR 24I_at_0.4
+155,PR 31A_at_4.0
+156,PR 31C_at_15.0
+157,PR 31E_at_15.0
+158,PR 32A_at_3.0
+159,PR 32C_at_12.0
+160,PR 32E_at_20.0
+161,SD 11A_at_1.0
+162,SD 11C_at_0.8
+163,SD 11E_at_0.7
+164,SD 11G_at_0.6
+165,SD 11I_at_0.5
+166,SD 11K_at_0.4
+167,SD 11M_at_0.4
+168,SD 11O_at_0.5
+169,SD 12A_at_2.0
+170,SD 12C_at_8.0
+171,SD 12E_at_16.0
+172,SD 13A_at_5.0
+173,SD 13C_at_10.0
+174,SD 13E_at_15.0
+175,SD 14A_at_15.0
+176,SD 14C_at_10.0
+177,SD 14E_at_5.0
+178,SD 15A_at_1.8
+179,SD 15C_at_1.7
+180,SD 15E_at_1.5
+181,SD 15G_at_1.0
+182,SD 15I_at_0.7
+183,SD 15K_at_0.5
+184,SD 15M_at_0.5
+185,SD 15O_at_0.4
+186,1A_Bryozoans quartzose gravel and sands_at_50.0
+187,1B_Molluscan quartzose gravel and sands_at_40.0
+188,1C_Biogenic quartzose gravel and sands_at_55.0
+189,2A_Bryozoans relict gravel and sands_at_100.0
+190,2B_Molluscan relict gravel and sands_at_60.0
+191,2C_Biogenic relict gravel and sands_at_120.0
+192,3A_Bryozans gravel and sands_at_200.0
+193,3B_Molluscan gravel and sands_at_150.0
+194,3C_Biogenic gravel sands and muds_at_90.0
+195,North Ronadlsay North Bank_at_48.0
+196,North Orkney Platform_at_48.0
+197,East Orkney Shelf_at_57.0
+198,East Orkney Shelf (Modiulus gravels)_at_67.0
+199,Orkney sounds_at_13.0
+200,Orkney sounds (algal gravels)_at_13.0
+201,138_at_60.0
+202,139_at_109.0
+203,140_at_104.0
+204,141_at_92.0
+205,142_at_92.0
+206,M65_at_85.0
+207,147_at_85.0
+208,160_at_134.0
+209,M49_at_170.0
+210,159_at_172.0
+211,158_at_162.0
+212,157_at_200.0
+213,Average_at_100.0
+214,10B_at_139.0
+215,11B_at_134.0
+216,15B_at_90.0
+217,16B_at_105.0
+218,17B_at_108.0
+219,18B_at_137.0
+220,19B_at_136.0
+221,20B_at_142.0
+222,01C_at_94.0
+223,02C_at_117.0
+224,03C_at_130.0
+225,04C_at_150.0
+226,05C_at_171.0
+227,06C_at_148.0
+228,07C_at_164.0
+229,08C_at_148.0
+230,09C_at_166.0
+231,10C_at_147.0
+232,11C_at_132.0
+233,12C_at_182.0
+234,13C_at_160.0
+235,14C_at_132.0
+236,15C_at_129.0
+237,16C_at_109.0
+238,17C_at_91.0
+239,18C_at_92.0
+240,19C_at_122.0
+241,20C_at_182.0
+242,21C_at_211.0
+243,22C_at_91.0
+244,23C_at_98.0
+245,24C_at_53.0
+246,25C_at_93.0
+247,26C_at_96.0
+248,27C_at_137.0
+249,28C_at_129.0
+250,Type 1_at_11.0
+251,Type 2_at_5.0
+252,Type 3_at_1.0
+253,Type 4_at_5.0
+254,Type 5_at_8.0
+255,Alcyonarian--Terrigeneous facies_at_35.0
+256,Foraminiferal facies_at_25.0
+257,Coral--coralline algal facies_at_2.0
+258,Coral—molluscan facies_at_1.0
+259,Coral—terrigeneous facies_at_1.0
+260,Framework cavity deposits_at_7.0
+261,Rhodolith pavement deposits_at_14.0
+262,mbt1_1_at_2.0
+263,mbt1_2_at_2.0
+264,mbt1_3_at_2.0
+265,mbt1_4_at_2.0
+266,mbt1_5_at_2.0
+267,mbt1_6_at_2.0
+268,mbt2_1_at_2.0
+269,mbt2_2_at_2.0
+270,mbt2_3_at_2.0
+271,mbt2_4_at_2.0
+272,mbt2_5_at_2.0
+273,mbt2_6_at_2.0
+274,mbt2_7_at_2.0
+275,mbt2_8_at_2.0
+276,mkt1_1_at_2.0
+277,mkt1_2_at_2.0
+278,mkt1_3_at_2.0
+279,mkt1_4_at_2.0
+280,mkt1_5_at_2.0
+281,mkt2_1_at_2.0
+282,mkt2_2_at_2.0
+283,mkt2_3_at_2.0
+284,mkt2_4_at_2.0
+285,mkt2_5_at_2.0
+286,kjt1_1_at_2.0
+287,kjt1_2_at_2.0
+288,kjt1_3_at_2.0
+289,kjt1_4_at_2.0
+290,kjt1_5_at_2.0
+291,kjt2_1_at_2.0
+292,kjt2_2_at_2.0
+293,kjt2_3_at_2.0
+294,kjt2_4_at_2.0
+295,kjt2_5_at_2.0
+296,kjt3_1_at_2.0
+297,kjt3_2_at_7.0
+298,kjt3_3_at_7.0
+299,kjt3_4_at_7.0
+300,kjt4_1_at_2.0
+301,kjt4_2_at_2.0
+302,kjt4_3_at_2.0
+303,kjt5_1_at_2.0
+304,kjt5_2_at_2.0
+305,kjt5_3_at_2.0
+306,kjt5_4_at_7.0
+307,kjt5_5_at_7.0
+308,kjt5_6_at_13.0
+309,kjt5_7_at_13.0
+310,kjt5_8_at_13.0
+311,KL7_at_3.0
+312,KL11_at_3.0
+313,KL47_at_3.0
+314,KL49_at_3.0
+315,KL55_at_3.0
+316,KL60_at_3.0
+317,KL71_at_3.0
+318,KL80_at_3.0
+319,KL100_at_3.0
+320,KL101_at_3.0
+321,KL107_at_3.0
+322,KL110_at_3.0
+323,KL124_at_3.0
+324,KL127_at_3.0
+325,KL130_at_3.0
+326,KL142_at_3.0
+327,KL146_at_3.0
+328,KL152_at_3.0
+329,KL160_at_3.0
+330,KL165_at_3.0
+331,KL181_at_3.0
+332,KL193_at_3.0
+333,KL194_at_3.0
+334,KL198_at_3.0
+335,KL207_at_3.0
+336,KL211_at_3.0
+337,KL228_at_3.0
+338,KL237_at_3.0
+339,KL282_at_3.0
+340,KL296_at_3.0
+341,KP161_at_5.0
+342,KP162_at_5.0
+343,KP164_at_5.0
+344,KP165_at_5.0
+345,KP166_at_5.0
+346,KP168_at_5.0
+347,KP169_at_5.0
+348,KP170_at_5.0
+349,KP171_at_5.0
+350,KP172_at_5.0
+351,KP173_at_5.0
+352,KP176_at_5.0
+353,KP177_at_5.0
+354,KP178_at_5.0
+355,KP179_at_5.0
+356,KP180_at_5.0
+357,KP182_at_5.0
+358,KP183_at_5.0
+359,KP184_at_5.0
+360,KP185_at_5.0
+361,KP186_at_5.0
+362,KP187_at_5.0
+363,KP188_at_5.0
+364,KP189_at_5.0
+365,KP191_at_5.0
+366,KP193_at_5.0
+367,KP195_at_5.0
+368,KP200_at_5.0
+369,ST1_at_12.5
+370,ST2_at_12.5
+371,451.2_at_39.0
+372,450.2_at_75.0
+373,449.4_at_149.0
+374,420_at_76.0
+375,433.1_at_43.0
+376,421_at_84.0
+377,422_at_106.0
+378,512_at_298.0
+379,423_at_178.0
+380,434.2_at_81.0
+381,429.3_at_102.0
+382,430.3_at_80.0
+383,431.2_at_61.0
+384,coastal zone_at_2.0
+385,reef platform/patch reefs_at_12.0
+386,central channel_at_25.0
+387,Barnacle Gravel_at_500.0
+388,Bryozoan Gravel and Variably Muddy Sand_at_800.0
+389,Stylasterine Gravel and Sand_at_480.0
+390,Microbioclastic Sand_at_350.0
+391,Pelagic Muddy Sand_at_700.0
+392,1_at_9.0
+393,2_at_9.0
+394,3_at_9.0
+395,4_at_9.0
+396,5_at_9.0
+397,6_at_9.0
